@@ -3,6 +3,7 @@
     <input type="text" v-model="name" />
     <input type="text" v-model="location" />
     <input type="text" v-model="bedrooms" />
+    <input type="text" v-model="bathrooms" />
     <input type="text" v-model="price" />
     <button class="btn btn-primary" @click="create">Create Contact</button>
   </div>
@@ -18,6 +19,7 @@ export default {
       name: '',
       location: '',
       bedrooms: '',
+      bathrooms: '',
       price: ''
     }
   },
