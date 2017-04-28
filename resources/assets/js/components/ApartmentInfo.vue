@@ -8,7 +8,6 @@
        <div class="col-md-6">
          <div class="form-group">
            <input class="form-control" type="text" v-model="name"/>
-           <!-- {{ this.tempname }} -->
          </div>
        </div>
        <div class="col-md-6">
@@ -55,11 +54,11 @@ import axios from 'axios';
 export default {
   data () {
     return {
-     name: this.apartments.name,
-     location: this.apartments.location,
-     bedrooms: this.apartments.bedrooms,
-     bathrooms: this.apartments.bathrooms,
-     price: this.apartments.price
+     name: this.apartment.name,
+     location: this.apartment.location,
+     bedrooms: this.apartment.bedrooms,
+     bathrooms: this.apartment.bathrooms,
+     price: this.apartment.price
    }
   },
   mounted () {
@@ -85,23 +84,23 @@ export default {
       console.log('Apartment -> save');
       this.apartment.name=this.tempName;
       axios.put('/apartments/$'+this.apartment.id, {
-        name: this.apartment.name,
-        location: this.apartment.location,
-        bedrooms: this.apartment.bedrooms,
-        bathrooms: this.apartment.bathrooms,
-        price: this.apartment.price
-      })
-        .then((response) => {
-          console.log('Apartment -> save success');
-          this.$emit('updated', {
-            name: this.name,
-            location: this.location,
-            bedrooms: this.bedrooms,
-            bathrooms: this.bathrooms,
-            price: this.price
-          });
-          this.editing = false;
-        })
+       name: this.apartment.name,
+       location: this.apartment.location,
+       bedrooms: this.apartment.bedrooms,
+       bathrooms: this.apartment.bathrooms,
+       price: this.apartment.price
+     })
+       .then((response) => {
+         console.log('Apartment -> save success');
+         this.$emit('updated', {
+           name: this.name,
+           location: this.location,
+           bedrooms: this.bedrooms,
+           bathrooms: this.bathrooms,
+           price: this.price
+         });
+         this.editing = false;
+       })
           .catch((error) => {
             console.log('Apartment -> save error');
               //*show the user that it couldn't be updated*
