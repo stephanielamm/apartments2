@@ -1,21 +1,24 @@
 <template lang="html">
 <div class="App">
-  <ApartmentForm></ApartmentForm>
-  <ApartmentList></ApartmentList>
+  <!--ApartmentForm></ApartmentForm
+  <ApartmentList></ApartmentList>-->
+  <ApartmentInfo></ApartmentInfo>
 
 </div>
 </template>
 
 <script>
   import axios from 'axios';
-  import ApartmentForm from './ApartmentForm';
-  import ApartmentList from './ApartmentList';
+  // import ApartmentForm from './ApartmentForm';
+  // import ApartmentList from './ApartmentList';
+  import ApartmentInfo from './ApartmentInfo';
 
 
   export default {
     components: {
-      ApartmentForm,
-      ApartmentList
+//      ApartmentForm,
+//      ApartmentList
+    ApartmentInfo
     },
 
     data() {

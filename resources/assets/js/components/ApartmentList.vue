@@ -1,17 +1,16 @@
 <template lang="html">
-      <div class="ApartmentList" @click="chosen">
+      <div class="ApartmentList">
 
       <!--  v-for, on click it shows a component where you pass the id of the apartment and that component pulls all the info about the apartment or just shows that. -->
+      <button>Create Button Goes Here</button>
         </div>
 </template>
 
 <script>
 import axios from 'axios';
-// import ApartmentInfo from './ApartmentInfo';
 
 export default {
   components: {
-    // ApartmentInfo
   },
 
   mounted () {
@@ -24,20 +23,10 @@ export default {
 
   data () {
     return {
-      // name: this.name,
-      // location: this.location,
-      // bedrooms: this.bedrooms,
-      // bathrooms: this.bathrooms,
-      // price: this.price
     }
   },
   methods: {
-    chosen () {
-      this.$emit('selected', this.apartment)
-    },
-    cancel () {
-      this.currentApartment =false;
-    }
+
   }
 }
 </script>
