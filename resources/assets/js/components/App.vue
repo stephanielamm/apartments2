@@ -2,7 +2,6 @@
 <div class="App">
   <!--ApartmentForm></ApartmentForm-->
   <ApartmentList></ApartmentList>
-  <!--ApartmentInfo></ApartmentInfo>-->
 
 </div>
 </template>
@@ -11,14 +10,14 @@
   import axios from 'axios';
   // import ApartmentForm from './ApartmentForm';
  import ApartmentList from './ApartmentList';
-  // import ApartmentInfo from './ApartmentInfo';
+ import ApartmentInfo from './ApartmentInfo';
 
 
   export default {
     components: {
 //      ApartmentForm
-      ApartmentList
-//    ApartmentInfo
+    ApartmentList,
+    ApartmentInfo
     },
 
     data() {

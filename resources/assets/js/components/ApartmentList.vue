@@ -9,24 +9,23 @@
             {{ apartment.bedrooms }}
             {{ apartment.bathrooms }}
             {{ apartment.price }}
-            <p class="conditional">
-              CURRENT APARTMENT
-            </p>
+            <ApartmentInfo class="conditional" :apartment="apartment">
+            </ApartmentInfo>
           </a>
         </p>
       </div>
     </div>
-
-      <!--  v-for, on click it shows a component where you pass the id of the apartment and that component pulls all the info about the apartment or just shows that. -->
       <button>Create Button Goes Here</button>
         </div>
 </template>
 
 <script>
 import axios from 'axios';
+import ApartmentInfo from './ApartmentInfo';
 
 export default {
   components: {
+    ApartmentInfo
   },
 
   mounted () {
