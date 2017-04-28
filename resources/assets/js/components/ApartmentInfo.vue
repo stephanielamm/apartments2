@@ -7,28 +7,28 @@
         <div class="col-md-12">
        <div class="col-md-6">
          <div class="form-group">
-           <input class="form-control" type="text" v-model="this.tempName"/>
+           <input class="form-control" type="text" v-model="name"/>
            <!-- {{ this.tempname }} -->
          </div>
        </div>
        <div class="col-md-6">
          <div class="form-group">
-           <input class="form-control" type="text" v-model="this.tempLocation" />
+           <input class="form-control" type="text" v-model="location" />
          </div>
        </div>
        <div class="col-md-6">
          <div class="form-group">
-           <input class="form-control" type="text" v-model="this.tempBedrooms" />
+           <input class="form-control" type="text" v-model="bedrooms" />
          </div>
        </div>
        <div class="col-md-6">
          <div class="form-group">
-           <input class="form-control" type="text" v-model="this.tempBathrooms" />
+           <input class="form-control" type="text" v-model="bathrooms" />
          </div>
        </div>
        <div class="col-md-6">
          <div class="form-group">
-           <input class="form-control" type="text" v-model="this.tempPrice" />
+           <input class="form-control" type="text" v-model="price" />
          </div>
        </div>
        <!--Save button-->
@@ -55,12 +55,12 @@ import axios from 'axios';
 export default {
   data () {
     return {
-      tempName: this.apartment.name,
-      tempLocation: this.apartment.location,
-      tempBedrooms: this.apartment.bedrooms,
-      tempBathrooms: this.apartment.bathrooms,
-      tempPrice: this.apartment.price
-    }
+     name: this.apartments.name,
+     location: this.apartments.location,
+     bedrooms: this.apartments.bedrooms,
+     bathrooms: this.apartments.bathrooms,
+     price: this.apartments.price
+   }
   },
   mounted () {
     console.log('ApartmentInfo -> mounted', this.apartment);
@@ -70,13 +70,6 @@ export default {
     'apartment'
   ],
   methods: {
-    // showEditing () {
-    //   this.UpdateForm = true
-    // },
-    // updated (e) {
-    //   this.$emit('updated', e);
-    // },
-
     remove (i) {
       console.log(`App -> remove ID ${i}`);
       axios.delete(`/apartments/${this.apartment.id}`)
@@ -90,42 +83,41 @@ export default {
     },
    save () {
       console.log('Apartment -> save');
-      // this.apartment.name=this.tempName;
-      // axios.put('/apartments/$'+this.apartment.id, {
-      //   name: this.apartment.name,
-      //   location: this.apartment.location,
-      //   bedrooms: this.apartment.bedrooms,
-      //   bathrooms: this.apartment.bathrooms,
-      //   price: this.apartment.price
-      // })
-      //   .then((response) => {
-      //     // console.log('Apartment -> save success');
-      //     // this.$emit('updated', {
-      //     //   name: this.name,
-      //     //   location: this.location,
-      //     //   bedrooms: this.bedrooms,
-      //     //   bathrooms: this.bathrooms,
-      //     //   price: this.price
-      //     // });
-      //     this.editing = false;
-      //   })
-      //     .catch((error) => {
-      //       console.log('Apartment -> save error');
-      //         //*show the user that it couldn't be updated*
-      //       });
-      //   },
-      //   cancel () {
-      //     console.log('Apartment -> cancel');
-      //     this.name = this.apartment.name;
-      //     this.location = this.apartment.location;
-      //     this.bedrooms = this.apartment.bedrooms;
-      //     this.bathrooms = this.apartment.bathrooms;
-      //     this.price = this.apartment.price;
-      //     this.editing = false;
-      //   }
+      this.apartment.name=this.tempName;
+      axios.put('/apartments/$'+this.apartment.id, {
+        name: this.apartment.name,
+        location: this.apartment.location,
+        bedrooms: this.apartment.bedrooms,
+        bathrooms: this.apartment.bathrooms,
+        price: this.apartment.price
+      })
+        .then((response) => {
+          console.log('Apartment -> save success');
+          this.$emit('updated', {
+            name: this.name,
+            location: this.location,
+            bedrooms: this.bedrooms,
+            bathrooms: this.bathrooms,
+            price: this.price
+          });
+          this.editing = false;
+        })
+          .catch((error) => {
+            console.log('Apartment -> save error');
+              //*show the user that it couldn't be updated*
+            });
+        },
+        cancel () {
+          console.log('Apartment -> cancel');
+          this.name = this.apartment.name;
+          this.location = this.apartment.location;
+          this.bedrooms = this.apartment.bedrooms;
+          this.bathrooms = this.apartment.bathrooms;
+          this.price = this.apartment.price;
+          this.editing = false;
+        }
       }
     }
-  }
 
 </script>
 <style lang="css">
