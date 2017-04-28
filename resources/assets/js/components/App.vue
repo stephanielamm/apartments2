@@ -1,0 +1,57 @@
+<template lang="html">
+<div class="App">
+  <ApartmentForm></ApartmentForm>
+
+</div>
+</template>
+
+<script>
+  import axios from 'axios';
+  import ApartmentForm from './ApartmentForm';
+
+  export default {
+    components: {
+      ApartmentForm
+    },
+
+    data() {
+      return {
+        apartments: []
+      }
+    },
+
+    mounted () {
+      this.fetch();
+    },
+
+    methods: {
+      fetch() {
+        console.log('App -> fetch success');
+        axios.get('/apartments')
+        .then((response) => {
+          console.log(response.data);
+          this.apartments = response.data;
+        })
+        .catch((response) => {
+          console.log('App -> fetch error');
+        })
+      },
+      update (data) {
+     // this.fetch();
+     var i = this.apartments.indexOf(data.apartment);
+     for (var d in data) {
+       this.apartments[i][d] = data[d];
+     }
+   },
+   remove (i) {
+     console.log(`App -> remove ID: ${i}`);
+     this.apartments.splice(i, 1);
+   }
+
+    }
+
+  }
+    </script>
+
+<style lang="css">
+</style>

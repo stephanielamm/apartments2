@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Seths Important Contacts</title>
+        <title>Stephanie's Apartment API</title>
     </head>
     <body>
       <div id="app"></div>
