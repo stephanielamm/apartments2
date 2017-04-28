@@ -1,6 +1,7 @@
 <template>
 <!--Input form-->
 <div class="ApartmentForm">
+  <button>Cancel</button>
       <div class="col-md-12">
         <h1 class="formTitle">Add New Apartment</h1>
       </div>
@@ -80,7 +81,10 @@ export default {
          this.bedrooms = '';
          this.bathrooms = '';
          this.price = '';
-       }
+       },
      }
    };
    </script>
+   <style lang="css">
+
+   </style>

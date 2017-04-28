@@ -1,5 +1,6 @@
 <template lang="html">
 <div class="App">
+  <Top></Top>
   <!--ApartmentForm></ApartmentForm-->
   <ApartmentList></ApartmentList>
 
@@ -8,12 +9,15 @@
 
 <script>
   import axios from 'axios';
+  import Top from './Top';
   // import ApartmentForm from './ApartmentForm';
  import ApartmentList from './ApartmentList';
  import ApartmentInfo from './ApartmentInfo';
+
   export default {
     components: {
 //      ApartmentForm
+    Top,
     ApartmentList,
     ApartmentInfo
     },

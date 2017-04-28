@@ -113,6 +113,7 @@ export default {
           this.bathrooms = this.apartment.bathrooms;
           this.price = this.apartment.price;
           this.editing = false;
+          this.$emit('cancel');
         }
       }
     }

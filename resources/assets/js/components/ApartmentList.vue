@@ -1,23 +1,22 @@
 <template lang="html">
-      <div class="ApartmentList">
-      <div class="container">
-        <div class="row">
-          <ApartmentForm v-if="formIsVisible"></ApartmentForm>
-        <p v-for="apartment in apartments" :class="{ active: isActive(apartment) }">
-          <a href="#" v-on:click="showDetails(apartment.id)">
-            {{ apartment.name }}
-            {{ apartment.location }}
-            {{ apartment.bedrooms }}
-            {{ apartment.bathrooms }}
-            {{ apartment.price }}
-            <ApartmentInfo class="conditional" :apartment="apartment">
-            </ApartmentInfo>
-          </a>
-        </p>
-      </div>
+ <div class="ApartmentList">
+  <div class="container">
+   <div class="row">
+    <button @click="formIsVisible = true">Add Apartment</button>
+      <ApartmentForm v-if="formIsVisible"></ApartmentForm>
+      <p v-for="apartment in apartments" :class="{ active: isActive(apartment) }">
+        <a href="#" v-on:click="showDetails(apartment.id)">
+          {{ apartment.name }}
+          {{ apartment.location }}
+          {{ apartment.bedrooms }}
+          {{ apartment.bathrooms }}
+          {{ apartment.price }}
+        </a>
+        <ApartmentInfo @cancel="cancelled" class="conditional" :apartment="apartment"></ApartmentInfo>
+      </p>
     </div>
-      <button @click="formIsVisible = true">Create Button Goes Here</button>
-        </div>
+  </div>
+ </div>
 </template>
 
 <script>
@@ -65,6 +64,9 @@ export default {
           return false;
       }
 
+    },
+    cancelled () {
+      this.currentApartment = null;
     }
 
   }
