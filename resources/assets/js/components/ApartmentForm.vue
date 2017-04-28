@@ -40,9 +40,7 @@
 
 <script>
 import axios from 'axios';
-
 export default {
-
   data() {
     return {
       name: '',
@@ -52,7 +50,6 @@ export default {
       price: ''
     }
   },
-
   methods: {
     create () {
       console.log('ApartmentForm -> create');

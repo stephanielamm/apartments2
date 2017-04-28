@@ -11,25 +11,20 @@
   // import ApartmentForm from './ApartmentForm';
  import ApartmentList from './ApartmentList';
  import ApartmentInfo from './ApartmentInfo';
-
-
   export default {
     components: {
 //      ApartmentForm
     ApartmentList,
     ApartmentInfo
     },
-
     data() {
       return {
         apartments: []
       }
     },
-
     mounted () {
       this.fetch();
     },
-
     methods: {
       fetch() {
         console.log('App -> fetch success');
@@ -53,9 +48,7 @@
      console.log(`App -> remove ID: ${i}`);
      this.apartments.splice(i, 1);
    }
-
     }
-
   }
     </script>
 

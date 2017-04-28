@@ -2,6 +2,7 @@
       <div class="ApartmentList">
       <div class="container">
         <div class="row">
+          <ApartmentForm v-if="formIsVisible"></ApartmentForm>
         <p v-for="apartment in apartments" :class="{ active: isActive(apartment) }">
           <a href="#" v-on:click="showDetails(apartment.id)">
             {{ apartment.name }}
@@ -15,17 +16,19 @@
         </p>
       </div>
     </div>
-      <button>Create Button Goes Here</button>
+      <button @click="formIsVisible = true">Create Button Goes Here</button>
         </div>
 </template>
 
 <script>
 import axios from 'axios';
 import ApartmentInfo from './ApartmentInfo';
+import ApartmentForm from './ApartmentForm';
 
 export default {
   components: {
-    ApartmentInfo
+    ApartmentInfo,
+    ApartmentForm
   },
 
   mounted () {
@@ -45,7 +48,8 @@ export default {
   data () {
     return {
       currentApartment: 0,
-      apartments: []
+      apartments: [],
+      formIsVisible: false
     }
   },
   methods: {
