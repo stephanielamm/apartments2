@@ -1,12 +1,5 @@
 <template>
-<!--  <div class="ApartmentForm">
-    <input type="text" v-model="name" />
-    <input type="text" v-model="location" />
-    <input type="text" v-model="bedrooms" />
-    <input type="text" v-model="bathrooms" />
-    <input type="text" v-model="price" />
-    <button class="btn btn-primary" @click="create">Create Contact</button> -->
-<!--FORM-->
+<!--Input form-->
 <div class="ApartmentForm">
       <div class="col-md-12">
         <h1 class="formTitle">Add New Apartment</h1>
@@ -37,6 +30,7 @@
          <input class="form-control" type="text" placeholder="Price" v-model="price" />
        </div>
      </div>
+     <!--Create button-->
      <div class="col-md-12">
           <button class="btn btn-primary pull-right create" @click="create()">create</button>
     </div>

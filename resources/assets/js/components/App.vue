@@ -1,6 +1,7 @@
 <template lang="html">
 <div class="App">
   <ApartmentForm></ApartmentForm>
+  <ApartmentList></ApartmentList>
 
 </div>
 </template>
@@ -8,10 +9,13 @@
 <script>
   import axios from 'axios';
   import ApartmentForm from './ApartmentForm';
+  import ApartmentList from './ApartmentList';
+
 
   export default {
     components: {
-      ApartmentForm
+      ApartmentForm,
+      ApartmentList
     },
 
     data() {
