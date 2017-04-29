@@ -84,20 +84,19 @@ export default {
     // DELETE method
     deleteApartment (i) {
       console.log(i);
-      this.apartments.splice(i.id, 1);
-      console.log(i.id);
+
+      console.log(this.apartments);
       axios.delete('/apartments/'+i.id, {
 
-      })
-      this.$emit('remove');
+      });
+      var arrayId = this.apartments.indexOf(i);
+      this.apartments.splice(arrayId, 1);
     },
     // Getting Create data from ApartmentForm
     fetch () {
-        console.log('App -> fetch');
+        // console.log('App -> fetch');
         axios.get('/apartments')
           .then((response) => {
-            console.log('App -> fetch success');
-            console.log(response.data);
             this.apartments = response.data;
           })
           .catch((response) => {

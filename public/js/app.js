@@ -2304,20 +2304,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     // DELETE method
     deleteApartment: function deleteApartment(i) {
       console.log(i);
-      this.apartments.splice(i.id, 1);
-      console.log(i.id);
+
+      console.log(this.apartments);
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/apartments/' + i.id, {});
-      this.$emit('remove');
+      var arrayId = this.apartments.indexOf(i);
+      this.apartments.splice(arrayId, 1);
     },
 
     // Getting Create data from ApartmentForm
     fetch: function fetch() {
       var _this2 = this;
 
-      console.log('App -> fetch');
+      // console.log('App -> fetch');
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/apartments').then(function (response) {
-        console.log('App -> fetch success');
-        console.log(response.data);
         _this2.apartments = response.data;
       }).catch(function (response) {
         console.log('App -> fetch error');
