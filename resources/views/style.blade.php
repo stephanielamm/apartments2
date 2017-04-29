@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,200i,400,500,700,800,900" rel="stylesheet">
-        <title>Subletr Style Guide</title>
+        <title>Apartment Finder Style Guide</title>
         <link rel="stylesheet" href="/css/apartments.css">
     </head>
     <body>
@@ -14,7 +14,7 @@
           <a href="/">Apartment API</a> |
           <a href="https://github.com/stephanielamm/apartments2">Github</a> |
           <a href="http://www.stephanielamm.com">Portfolio</a>
-          <a href="https://www.gitbook.com/book/stephanielamm/subletr">Documentation</a>
+          <a href="http://www.gitbook">Documentation</a>
         </div>
       </div>
       <div class="container">
@@ -28,8 +28,8 @@
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <h3>Color</h3>
             <div class="row">
-              <div class="col-xs-4" style="background-color:#0500f0; color: white">
-                #0500f0
+              <div class="col-xs-4" style="background-color:#76DED7; color: white">
+                #76DED7
               </div>
               <div class="col-xs-4" style="background-color:#f00008; color: white">
                 #f00008

@@ -10,16 +10,20 @@
   padding-left: 8%;
   text-align: center;
 }
+
+a {
+  color: #76DED7
+}
 .addrow {
     margin-bottom: 12px;
     margin-left: 12px;
     padding-left: 15px;
   }
 .red {
-  color: #f00008;s
+  color: #f00008;
 }
 .blue {
-  color: #0500f0;
+  color: #76DED7;
 }
 .lead {
  font-weight: 500;
