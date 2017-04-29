@@ -2060,6 +2060,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2074,6 +2076,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
+    cancel: function cancel() {
+      console.log('Apartment -> cancel');
+      this.name = '';
+      this.location = '';
+      this.bedrooms = '';
+      this.bathrooms = '';
+      this.price = '';
+      this.editing = false;
+      this.$emit('cancel');
+    },
     create: function create() {
       console.log('ApartmentForm -> create');
       this.sendRequest();
@@ -2096,13 +2108,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.error('ApartmentForm -> sendRequest error');
         // show an error message
       });
-    },
-    reset: function reset() {
-      this.name = '';
-      this.location = '';
-      this.bedrooms = '';
-      this.bathrooms = '';
-      this.price = '';
     }
   }
 });
@@ -2289,9 +2294,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
-    deleteApartment: function deleteApartment(apartment) {
-      //  this.currentApartment = apartment.id;
-
+    deleteApartment: function deleteApartment(i) {
+      console.log(i);
+      this.apartments.splice(i, 1);
+      this.$emit('remove');
     },
     isActive: function isActive(apartment) {
       if (apartment.id == this.currentApartment) {
@@ -4860,7 +4866,7 @@ exports.push([module.i, "\n.conditional {\n  display: none;\n}\n.active .conditi
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 44 */
@@ -32844,7 +32850,14 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "ApartmentForm"
-  }, [_c('button', [_vm._v("Cancel")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('div', {
+  }, [_c('button', {
+    staticClass: "btn btn-primary pull-right cancel",
+    on: {
+      "click": function($event) {
+        _vm.cancel()
+      }
+    }
+  }, [_vm._v("Cancel")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "col-md-12"
   }, [_c('div', {
     staticClass: "col-md-6"

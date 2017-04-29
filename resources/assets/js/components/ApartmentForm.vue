@@ -1,7 +1,9 @@
 <template>
-<!--Input form-->
+<!--Create form-->
 <div class="ApartmentForm">
-  <button>Cancel</button>
+  <!--Cancel Button-->
+       <button class="btn btn-primary pull-right cancel" @click="cancel()">Cancel</button>
+
       <div class="col-md-12">
         <h1 class="formTitle">Add New Apartment</h1>
       </div>
@@ -52,6 +54,16 @@ export default {
     }
   },
   methods: {
+    cancel () {
+      console.log('Apartment -> cancel');
+      this.name = '';
+      this.location = '';
+      this.bedrooms = '';
+      this.bathrooms = '';
+      this.price = '';
+      this.editing = false;
+      this.$emit('cancel');
+    },
     create () {
       console.log('ApartmentForm -> create');
       this.sendRequest();
@@ -74,13 +86,6 @@ export default {
            console.error('ApartmentForm -> sendRequest error');
            // show an error message
          });
-       },
-       reset () {
-         this.name = '';
-         this.location = '';
-         this.bedrooms = '';
-         this.bathrooms = '';
-         this.price = '';
        },
      }
    };

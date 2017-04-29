@@ -72,8 +72,10 @@ export default {
     }
   },
   methods: {
-    deleteApartment (apartment) {
-    //  this.currentApartment = apartment.id;
+    deleteApartment (i) {
+      console.log(i);
+      this.apartments.splice(i, 1);
+      this.$emit('remove');
 
     },
     isActive (apartment) {
