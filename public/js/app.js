@@ -2061,7 +2061,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -4863,14 +4862,14 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n.conditional {\n  display: none;\n}\n.active .conditional {\n  display: block;\n}\n.addrow {\n  margin-bottom: 12px;\n  margin-left: 12px;\n  padding-left: 15px;\n}\n", ""]);
+exports.push([module.i, "\n.conditional {\n  display: none;\n}\n.active .conditional {\n  display: block;\n}\n", ""]);
 
 /***/ }),
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 44 */
@@ -32808,7 +32807,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "row addrow"
   }, [_c('button', {
-    staticClass: "btn pull-left add",
+    staticClass: "btn btn-small pull-left",
     on: {
       "click": function($event) {
         _vm.formIsVisible = true
@@ -32823,7 +32822,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "row addrow"
   }, [_c('button', {
-    staticClass: "btn pull-left add",
+    staticClass: "btn btn-small pull-left add",
     on: {
       "click": function($event) {
         _vm.formIsVisible = false
@@ -32845,6 +32844,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "scope": "row"
       }
     }, [_c('a', {
+      staticClass: "delete",
       attrs: {
         "href": "#"
       },
@@ -33003,17 +33003,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   })])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-12"
   }, [_c('button', {
-    staticClass: "btn btn-primary pull-right create",
+    staticClass: "btn btn-small pull-right create",
     on: {
       "click": function($event) {
         _vm.create()
       }
     }
-  }, [_vm._v("create")])])])])
+  }, [_vm._v("Create")])])])])
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "col-md-12"
-  }, [_c('h1', {
+  }, [_c('h2', {
     staticClass: "formTitle"
   }, [_vm._v("Add New Apartment")])])
 }]}

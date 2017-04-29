@@ -3,12 +3,12 @@
   <div class="container">
   <!-- Add Apartment Button -->
    <div class="row addrow">
-    <button class="btn pull-left add" @click="formIsVisible = true">Add Apartment</button>
+    <button class="btn btn-small pull-left" @click="formIsVisible = true">Add Apartment</button>
    </div>
 
   <!--Cancel Button-->
   <div class="row addrow" v-show="formIsVisible">
-       <button class="btn pull-left add" @click="formIsVisible = false">Cancel</button>
+       <button class="btn btn-small pull-left add" @click="formIsVisible = false">Cancel</button>
  </div>
 
   <!-- Table Starts -->
@@ -32,7 +32,7 @@
             <tr v-for="apartment in apartments" :class="{ active: isActive(apartment) }">
 
                 <!-- Delete Here -->
-                <th scope="row"> <a href="#" v-on:click="deleteApartment(apartment)"> Delete </a> </th>
+                <th scope="row"> <a href="#" class="delete" v-on:click="deleteApartment(apartment)"> Delete </a> </th>
                 <td>  {{ apartment.name }} </td>
                 <td> {{ apartment.location }} </td>
                 <td> {{ apartment.bedrooms }} </td>
@@ -112,10 +112,5 @@ export default {
   }
   .active .conditional {
     display: block;
-  }
-  .addrow {
-    margin-bottom: 12px;
-    margin-left: 12px;
-    padding-left: 15px;
   }
 </style>

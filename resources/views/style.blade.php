@@ -85,20 +85,12 @@
               <button>Large Button</button>
             </div>
             <h3>Inputs</h3>
-            <input type="text" name="" value="" placeholder="input text"> <br />
-            <select class="" name="">
-              <option selected disabled value="">Select</option>
-              <option value="option">Option 1</option>
-              <option value="option">Option 2</option>
-              <option value="option">Option 3</option>
-            </select>
+            <h2 class="formTitle">Form Title</h2>
+            <input class="form-control" type="text" placeholder="Price" />
           </div>
         </div>
       </div>
-
-
-<!--
-ul, li, ol, li
-  -->
+</br>
+</br>
     </body>
 </html>

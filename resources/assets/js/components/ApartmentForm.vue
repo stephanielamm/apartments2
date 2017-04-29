@@ -1,9 +1,8 @@
 <template>
 <!--Create form-->
 <div class="ApartmentForm">
-
       <div class="col-md-12">
-        <h1 class="formTitle">Add New Apartment</h1>
+        <h2 class="formTitle">Add New Apartment</h2>
       </div>
       <div class="col-md-12">
      <div class="col-md-6">
@@ -33,7 +32,7 @@
      </div>
      <!--Create button-->
      <div class="col-md-12">
-          <button class="btn btn-primary pull-right create" @click="create()">create</button>
+          <button class="btn btn-small pull-right create" @click="create()">Create</button>
     </div>
    </div>
   </div>
