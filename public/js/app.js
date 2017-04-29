@@ -32816,11 +32816,9 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       value: (_vm.formIsVisible),
       expression: "formIsVisible"
     }],
-    staticClass: "row cancelbutton"
-  }, [_c('a', {
-    attrs: {
-      "href": "#"
-    },
+    staticClass: "row addrow"
+  }, [_c('button', {
+    staticClass: "btn pull-left add",
     on: {
       "click": function($event) {
         _vm.formIsVisible = false

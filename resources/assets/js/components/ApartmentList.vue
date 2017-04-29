@@ -7,9 +7,9 @@
   </div>
 
   <!--Cancel Button-->
-  <div class="row cancelbutton" v-show="formIsVisible">
-     <a href="#" @click="formIsVisible = false">Cancel
-     </a>
+  <div class="row addrow" v-show="formIsVisible">
+       <button class="btn pull-left add" @click="formIsVisible = false">Cancel
+     </button>
 </div>
   <!-- Table Starts -->
   <div class="row">
