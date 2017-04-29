@@ -16,7 +16,7 @@ https://www.mamp.info/en/
 - Open the Terminal and CD into the downloaded repository. Once there, run 'php artisan:migrate.' This creates the proper tables in your app database.
 - Open the browser to localhost:8888. You should see the screen below:
 
-<p align="center"><img src="subletr.png" height="300" width="auto"></p>
+<p align="center"><img src="subletr.PNG"></p>
 
 
 ## Documentation
