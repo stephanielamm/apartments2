@@ -32578,9 +32578,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container-fluid header"
   }, [_c('div', {
     staticClass: "row"
-  }, [_c('h1', [_vm._v("Apartment Finder")])]), _vm._v(" "), _c('div', {
+  }, [_c('h1', {
+    staticClass: "blue"
+  }, [_vm._v("Subletr")])]), _vm._v(" "), _c('div', {
     staticClass: "row"
-  }, [_c('h5', [_vm._v("This is a place to store information and compare apartments. Click on an apartment listing to view details and edit or delete it.")])]), _vm._v(" "), _c('div', {
+  }, [_c('h5', [_vm._v("This is an application to store information and compare apartments. Click the button below to create a new apartment.")])]), _vm._v(" "), _c('div', {
     staticClass: "row links"
   }, [_c('a', {
     attrs: {
@@ -32844,7 +32846,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
         "scope": "row"
       }
     }, [_c('a', {
-      staticClass: "delete",
+      staticClass: "red",
       attrs: {
         "href": "#"
       },

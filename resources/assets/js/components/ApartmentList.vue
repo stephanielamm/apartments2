@@ -32,7 +32,7 @@
             <tr v-for="apartment in apartments" :class="{ active: isActive(apartment) }">
 
                 <!-- Delete Here -->
-                <th scope="row"> <a href="#" class="delete" v-on:click="deleteApartment(apartment)"> Delete </a> </th>
+                <th scope="row"> <a href="#" class="red" v-on:click="deleteApartment(apartment)"> Delete </a> </th>
                 <td>  {{ apartment.name }} </td>
                 <td> {{ apartment.location }} </td>
                 <td> {{ apartment.bedrooms }} </td>
