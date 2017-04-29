@@ -69,7 +69,8 @@ export default {
   },
 
   props: [
-    'apartment'
+    'apartment',
+    'currentApartment'
     ],
 
   data () {
@@ -90,6 +91,7 @@ export default {
       })
       this.$emit('remove');
     },
+    // Getting Create data from ApartmentForm
     fetch () {
         console.log('App -> fetch');
         axios.get('/apartments')

@@ -2290,7 +2290,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
 
-  props: ['apartment'],
+  props: ['apartment', 'currentApartment'],
 
   data: function data() {
     return {
@@ -2309,6 +2309,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/apartments/' + i.id, {});
       this.$emit('remove');
     },
+
+    // Getting Create data from ApartmentForm
     fetch: function fetch() {
       var _this2 = this;
 
@@ -2393,14 +2395,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.log('App -> fetch error');
       });
     },
-    update: function update(data) {
-      this.fetch();
-      var i = this.apartments.indexOf(data.apartment);
-      for (var d in data) {
-        this.apartments[i][d] = data[d];
-      }
-    },
-    remove: function remove(i) {
+
+    //     update (data) {
+    //     this.fetch();
+    //    var i = this.apartments.indexOf(data.apartment);
+    //    for (var d in data) {
+    //      this.apartments[i][d] = data[d];
+    //    }
+    //  },
+    remove: function remove(data) {
+      var i = this.apartments.indexOf(data);
       console.log('App -> remove ID: ' + i);
       this.apartments.splice(i, 1);
     }
@@ -4873,7 +4877,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""])
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 41 */
@@ -32646,7 +32650,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "app"
   }, [_c('div', {
     staticClass: "App"
-  }, [_c('Top'), _vm._v(" "), _c('ApartmentList')], 1)])
+  }, [_c('Top'), _vm._v(" "), _c('ApartmentList', {
+    on: {
+      "deleted": _vm.remove
+    }
+  })], 1)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
