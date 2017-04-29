@@ -69,7 +69,6 @@ export default {
 
   props: [
     'apartment'
-    //'currentApartment'
     ],
 
   data () {
@@ -80,6 +79,7 @@ export default {
     }
   },
   methods: {
+    // DELETE method
     deleteApartment (i) {
       console.log(i);
       this.apartments.splice(i.id, 1);

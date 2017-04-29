@@ -2077,6 +2077,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
+    // POST method
     create: function create() {
       console.log('ApartmentForm -> create');
       this.sendRequest();
@@ -2099,6 +2100,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         console.error('ApartmentForm -> sendRequest error');
         // show an error message
       });
+    },
+    reset: function reset() {
+      this.name = '';
+      this.location = '';
+      this.bedrooms = '';
+      this.bathrooms = '';
+      this.price = '';
     }
   }
 });
@@ -2281,9 +2289,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
 
-  props: ['apartment'
-  //'currentApartment'
-  ],
+  props: ['apartment'],
 
   data: function data() {
     return {
@@ -2294,6 +2300,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
+    // DELETE method
     deleteApartment: function deleteApartment(i) {
       console.log(i);
       this.apartments.splice(i.id, 1);
@@ -2337,8 +2344,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -2361,6 +2366,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
+    // GET method
     fetch: function fetch() {
       var _this = this;
 
@@ -4852,7 +4858,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""])
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n.list {\n}\r\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 41 */
@@ -4873,7 +4879,7 @@ exports.push([module.i, "\n.conditional {\n  display: none;\n}\n.active .conditi
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 44 */
@@ -32583,10 +32589,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "row"
   }, [_c('h1', {
-    staticClass: "blue"
+    staticClass: "blue weight2"
   }, [_vm._v("Subletr")])]), _vm._v(" "), _c('div', {
     staticClass: "row"
-  }, [_c('h5', [_vm._v("This is a place to store information and compare apartments. Click on an apartment listing to view details and edit or delete it.")])]), _vm._v(" "), _c('div', {
+  }, [_c('h5', {
+    staticClass: "weight1"
+  }, [_vm._v("This is an application to store and compare apartment listings. Click the button below to add an apartment to your list.")])]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('a', {
     attrs: {
@@ -32623,9 +32631,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "app"
   }, [_c('div', {
     staticClass: "App"
-  }, [_c('Top'), _vm._v(" "), _c('div', {
-    staticClass: "container-fluid list"
-  }, [_c('ApartmentList')], 1)], 1)])
+  }, [_c('Top'), _vm._v(" "), _c('ApartmentList')], 1)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

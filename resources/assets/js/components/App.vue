@@ -2,9 +2,7 @@
 <div class="app">
 <div class="App">
   <Top></Top>
-  <div class="container-fluid list">
   <ApartmentList></ApartmentList>
-</div>
 </div>
 </div>
 </template>
@@ -30,6 +28,7 @@
       this.fetch();
     },
     methods: {
+      // GET method
       fetch() {
         console.log('App -> fetch success');
         axios.get('/apartments')
@@ -57,6 +56,4 @@
     </script>
 
 <style lang="css">
-.list {
-}
 </style>

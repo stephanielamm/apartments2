@@ -53,6 +53,7 @@ export default {
     }
   },
   methods: {
+    // POST method
     create () {
       console.log('ApartmentForm -> create');
       this.sendRequest();
@@ -74,8 +75,15 @@ export default {
          .catch((error) => {
            console.error('ApartmentForm -> sendRequest error');
            // show an error message
-         });
-       },
+       });
+},
+        reset () {
+        this.name = '';
+        this.location = '';
+        this.bedrooms = '';
+        this.bathrooms = '';
+        this.price = '';
+       }
 
      }
    };

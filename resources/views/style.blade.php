@@ -24,6 +24,7 @@
             <hr>
           </div>
         </div>
+        <!-- Colors -->
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <h3 class="grey weight2">Color</h3>
@@ -42,6 +43,7 @@
             </div>
           </div>
         </div>
+        <!-- Fonts -->
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <h3 class="grey weight2">Typography</h3>
@@ -59,6 +61,7 @@
             <p class="light">p.light Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit eu mi id sollicitudin. Donec quis ultricies lacus. Praesent justo tortor, semper ut arcu nec, sodales dictum nisi. Aliquam eu felis in augue rutrum mattis eu laoreet tortor. Nullam sed tempor odio. Donec fringilla quam odio, at pretium metus suscipit quis. Aenean quis nisl at massa aliquam egestas id in mauris. Cras placerat cursus tellus, cursus pretium felis blandit nec. Ut orci tortor, lacinia nec sagittis posuere, cursus eget dui. Ut consectetur quis nisl eu mattis. Nam sapien odio, blandit sed laoreet et, porta non sapien.</p>
           </div>
         </div>
+        <!-- Lists -->
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <h3 class="grey weight2">Lists</h3>
@@ -78,6 +81,7 @@
           </ol>
           </div>
         </div>
+        <!-- Buttons -->
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <h3 class="grey weight2">Buttons</h3>
@@ -88,7 +92,7 @@
               <button class="btn btn-large">Large Button</button>
             <h3 class="grey weight2">Inputs</h3>
             <hr>
-
+            <!-- Forms -->
             <h2 class="formTitle">Form Title</h2>
             <input class="form-control" type="text" placeholder="Price" />
           </div>
