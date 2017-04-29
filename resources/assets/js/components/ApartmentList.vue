@@ -4,13 +4,13 @@
   <!-- Add Apartment Button -->
    <div class="row addrow">
     <button class="btn pull-left add" @click="formIsVisible = true">Add Apartment</button>
-  </div>
+   </div>
 
   <!--Cancel Button-->
   <div class="row addrow" v-show="formIsVisible">
-       <button class="btn pull-left add" @click="formIsVisible = false">Cancel
-     </button>
-</div>
+       <button class="btn pull-left add" @click="formIsVisible = false">Cancel</button>
+ </div>
+
   <!-- Table Starts -->
   <div class="row">
     <div class="col-lg-12">
