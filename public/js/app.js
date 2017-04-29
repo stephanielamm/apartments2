@@ -2283,7 +2283,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
 
-  props: ['apartment'],
+  props: ['apartment', 'currentApartment'],
 
   data: function data() {
     return {
@@ -2296,7 +2296,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   methods: {
     deleteApartment: function deleteApartment(i) {
       console.log(i);
-      this.apartments.splice(i, 1);
+      this.apartments.splice(i.id, 1);
+      console.log(i.id);
+      __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/apartments/' + i.id, {});
       this.$emit('remove');
     },
     isActive: function isActive(apartment) {

@@ -61,7 +61,8 @@ export default {
   },
 
   props: [
-    'apartment'
+    'apartment',
+    'currentApartment'
     ],
 
   data () {
@@ -74,9 +75,12 @@ export default {
   methods: {
     deleteApartment (i) {
       console.log(i);
-      this.apartments.splice(i, 1);
-      this.$emit('remove');
+      this.apartments.splice(i.id, 1);
+      console.log(i.id);
+      axios.delete('/apartments/'+i.id, {
 
+      })
+      this.$emit('remove');
     },
     isActive (apartment) {
       if (apartment.id==this.currentApartment) {
