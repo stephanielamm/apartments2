@@ -1,8 +1,11 @@
 <template lang="html">
  <div class="ApartmentList">
   <div class="container">
-   <div class="row">
-    <button @click="formIsVisible = true">Add Apartment</button>
+   <div class="row addrow">
+    <button class="btn pull-left add" @click="formIsVisible = true">Add Apartment</button>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
       <ApartmentForm v-if="formIsVisible"></ApartmentForm>
       <table class="table table-hover table-responsive">
         <thead>
@@ -16,24 +19,20 @@
           </tr>
         </thead>
         <tbody>
-
-<!-- showDetails(apartment.id) -->
-
             <tr v-for="apartment in apartments" :class="{ active: isActive(apartment) }">
-                <th scope="row"> {{ apartment.id }} </th>
-                <td> <a href="#" v-on:click="showDetails(apartment)"> {{ apartment.name }} </a> </td>
+                <th scope="row"> <a href="#" v-on:click="showDetails(apartment)"> Edit </a> </th>
+                <td>  {{ apartment.name }} </td>
                 <td> {{ apartment.location }} </td>
                 <td> {{ apartment.bedrooms }} </td>
                 <td> {{ apartment.bathrooms }} </td>
                 <td> {{ apartment.price }} </td>
                 <ApartmentInfo @cancel="cancelled" class="conditional" :apartment="apartment"></ApartmentInfo>
             </tr>
-
-
         </tbody>
     </table>
     </div>
   </div>
+</div>
  </div>
 </template>
 
@@ -72,7 +71,7 @@ export default {
   methods: {
     showDetails (apartment) {
       this.currentApartment = apartment.id;
-      
+
     },
     isActive (apartment) {
       // console.log(apartment);
@@ -98,5 +97,13 @@ export default {
   }
   .active .conditional {
     display: block;
+  }
+  .add {
+
+  }
+  .addrow {
+    margin-bottom: 12px;
+    margin-left: 12px;
+    padding-left: 15px;
   }
 </style>

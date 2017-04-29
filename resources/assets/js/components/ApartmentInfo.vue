@@ -1,10 +1,14 @@
 <template>
-  <!--Input form-->
+  <!--Editing form-->
   <div class="ApartmentInfo">
+    
+    <!--Cancel button-->
+    <div class="col-md-12">
+         <button class="btn btn-primary pull-right cancel" @click="cancel()">Cancel</button>
+   </div>
         <div class="col-md-12">
-          <h1 class="formTitle">Apartment</h1>
+          <h1 class="formTitle">Edit</h1>
         </div>
-        <div class="col-md-12">
        <div class="col-md-6">
          <div class="form-group">
            <input class="form-control" type="text" v-model="name"/>
@@ -31,17 +35,12 @@
          </div>
        </div>
        <!--Save button-->
-       <div class="col-md-12">
+       <div class="col-md-6">
             <button class="btn btn-primary pull-right create" @click="save()">Save</button>
       </div>
       <!--Delete button-->
-      <div class="col-md-12">
+      <div class="col-md-6">
            <button class="btn btn-primary pull-right remove" @click="remove()">Delete</button>
-     </div>
-     <!--Cancel button-->
-     <div class="col-md-12">
-          <button class="btn btn-primary pull-right cancel" @click="cancel()">Cancel</button>
-    </div>
      </div>
     </div>
 
