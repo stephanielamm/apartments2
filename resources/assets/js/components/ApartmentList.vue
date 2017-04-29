@@ -5,8 +5,13 @@
    <div class="row addrow">
     <button class="btn pull-left add" @click="formIsVisible = true">Add Apartment</button>
   </div>
-  <!-- Table Starts -->
 
+  <!--Cancel Button-->
+  <div class="row cancelbutton" v-show="formIsVisible">
+     <a href="#" @click="formIsVisible = false">Cancel
+     </a>
+</div>
+  <!-- Table Starts -->
   <div class="row">
     <div class="col-lg-12">
       <ApartmentForm v-if="formIsVisible"></ApartmentForm>
@@ -21,9 +26,11 @@
             <th>Price</th>
           </tr>
         </thead>
+
         <!-- Table Body, Loops in Table Row -->
         <tbody>
             <tr v-for="apartment in apartments" :class="{ active: isActive(apartment) }">
+
                 <!-- Delete Here -->
                 <th scope="row"> <a href="#" v-on:click="deleteApartment(apartment)"> Delete </a> </th>
                 <td>  {{ apartment.name }} </td>
@@ -61,8 +68,8 @@ export default {
   },
 
   props: [
-    'apartment',
-    'currentApartment'
+    'apartment'
+    //'currentApartment'
     ],
 
   data () {
@@ -105,9 +112,6 @@ export default {
   }
   .active .conditional {
     display: block;
-  }
-  .add {
-
   }
   .addrow {
     margin-bottom: 12px;

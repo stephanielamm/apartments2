@@ -2019,6 +2019,8 @@ module.exports = function spread(callback) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ApartmentList__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ApartmentList___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__ApartmentList__);
 //
 //
 //
@@ -2060,8 +2062,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2076,16 +2078,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
   methods: {
-    cancel: function cancel() {
-      console.log('Apartment -> cancel');
-      this.name = '';
-      this.location = '';
-      this.bedrooms = '';
-      this.bathrooms = '';
-      this.price = '';
-      this.editing = false;
-      this.$emit('cancel');
-    },
     create: function create() {
       console.log('ApartmentForm -> create');
       this.sendRequest();
@@ -2264,6 +2256,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2283,7 +2282,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   },
 
 
-  props: ['apartment', 'currentApartment'],
+  props: ['apartment'
+  //'currentApartment'
+  ],
 
   data: function data() {
     return {
@@ -4861,14 +4862,14 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n.conditional {\n  display: none;\n}\n.active .conditional {\n  display: block;\n}\n.add {\n}\n.addrow {\n  margin-bottom: 12px;\n  margin-left: 12px;\n  padding-left: 15px;\n}\n", ""]);
+exports.push([module.i, "\n.conditional {\n  display: none;\n}\n.active .conditional {\n  display: block;\n}\n.addrow {\n  margin-bottom: 12px;\n  margin-left: 12px;\n  padding-left: 15px;\n}\n", ""]);
 
 /***/ }),
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 44 */
@@ -32809,6 +32810,23 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       }
     }
   }, [_vm._v("Add Apartment")])]), _vm._v(" "), _c('div', {
+    directives: [{
+      name: "show",
+      rawName: "v-show",
+      value: (_vm.formIsVisible),
+      expression: "formIsVisible"
+    }],
+    staticClass: "row cancelbutton"
+  }, [_c('a', {
+    attrs: {
+      "href": "#"
+    },
+    on: {
+      "click": function($event) {
+        _vm.formIsVisible = false
+      }
+    }
+  }, [_vm._v("Cancel\n     ")])]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-lg-12"
@@ -32852,14 +32870,7 @@ if (false) {
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "ApartmentForm"
-  }, [_c('button', {
-    staticClass: "btn btn-primary pull-right cancel",
-    on: {
-      "click": function($event) {
-        _vm.cancel()
-      }
-    }
-  }, [_vm._v("Cancel")]), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('div', {
+  }, [_vm._m(0), _vm._v(" "), _c('div', {
     staticClass: "col-md-12"
   }, [_c('div', {
     staticClass: "col-md-6"

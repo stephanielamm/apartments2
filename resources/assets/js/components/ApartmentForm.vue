@@ -1,8 +1,6 @@
 <template>
 <!--Create form-->
 <div class="ApartmentForm">
-  <!--Cancel Button-->
-       <button class="btn btn-primary pull-right cancel" @click="cancel()">Cancel</button>
 
       <div class="col-md-12">
         <h1 class="formTitle">Add New Apartment</h1>
@@ -43,6 +41,8 @@
 
 <script>
 import axios from 'axios';
+import ApartmentList from './ApartmentList';
+
 export default {
   data() {
     return {
@@ -54,16 +54,6 @@ export default {
     }
   },
   methods: {
-    cancel () {
-      console.log('Apartment -> cancel');
-      this.name = '';
-      this.location = '';
-      this.bedrooms = '';
-      this.bathrooms = '';
-      this.price = '';
-      this.editing = false;
-      this.$emit('cancel');
-    },
     create () {
       console.log('ApartmentForm -> create');
       this.sendRequest();
@@ -87,6 +77,7 @@ export default {
            // show an error message
          });
        },
+
      }
    };
    </script>
