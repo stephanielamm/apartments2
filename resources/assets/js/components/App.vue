@@ -1,8 +1,10 @@
 <template lang="html">
+<div class="app">
 <div class="App">
   <Top></Top>
   <div class="container-fluid list">
   <ApartmentList></ApartmentList>
+</div>
 </div>
 </div>
 </template>

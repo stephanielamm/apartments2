@@ -2337,6 +2337,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -2390,6 +2392,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
 //
 //
 //
@@ -4841,7 +4845,7 @@ if (typeof jQuery === 'undefined') {
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)();
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 /***/ }),
 /* 40 */
@@ -32580,7 +32584,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "row"
   }, [_c('h1', {
     staticClass: "blue"
-  }, [_vm._v("Apartment Finder")])]), _vm._v(" "), _c('div', {
+  }, [_vm._v("Subletr")])]), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('h5', [_vm._v("This is a place to store information and compare apartments. Click on an apartment listing to view details and edit or delete it.")])]), _vm._v(" "), _c('div', {
     staticClass: "row"
@@ -32600,7 +32604,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "href": "http://www.gitbook"
     }
-  }, [_vm._v("Documentation")])])])])
+  }, [_vm._v("Documentation")])])]), _vm._v(" "), _c('hr')])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -32616,10 +32620,12 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: "app"
+  }, [_c('div', {
     staticClass: "App"
   }, [_c('Top'), _vm._v(" "), _c('div', {
     staticClass: "container-fluid list"
-  }, [_c('ApartmentList')], 1)], 1)
+  }, [_c('ApartmentList')], 1)], 1)])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

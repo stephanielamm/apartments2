@@ -5,13 +5,13 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:200,200i,400,500,700,800,900" rel="stylesheet">
-        <title>Apartment Finder Style Guide</title>
+        <title>Subletr Style Guide</title>
         <link rel="stylesheet" href="/css/apartments.css">
     </head>
     <body>
       <div class="container-fluid header">
         <div class="row links">
-          <a href="/">Apartment API</a> |
+          <a href="/">Subletr API</a> |
           <a href="https://github.com/stephanielamm/apartments2">Github</a> |
           <a href="http://www.stephanielamm.com">Portfolio</a>
           <a href="http://www.gitbook">Documentation</a>
@@ -20,13 +20,15 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h1>Apartment Finder</h1>
-            <h2>Style guide</h2>
+            <h1>Subletr Style Guide</h1>
+            <hr>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-            <h3>Color</h3>
+            <h3 class="grey weight2">Color</h3>
+            <hr>
+
             <div class="row">
               <div class="col-xs-4" style="background-color:#76DED7; color: white">
                 #76DED7
@@ -42,7 +44,9 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-            <h3>Typography</h3>
+            <h3 class="grey weight2">Typography</h3>
+            <hr>
+
             <h1 class="weight1 blue">h1 Main Header Weight 1</h1>
             <h1 class="weight2">h2 Main Header Weight 2</h1>
             <h1 class="weight3 red">h3 Main Header Weight 3</h1>
@@ -57,7 +61,9 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-            <h3>Lists</h3>
+            <h3 class="grey weight2">Lists</h3>
+            <hr>
+
             <ul class="ul">
             <li>Unordered Item 1</li>
             <li>Unordered Item 2</li>
@@ -74,11 +80,15 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-            <h3>Buttons</h3>
+            <h3 class="grey weight2">Buttons</h3>
+            <hr>
+
               <button class="btn btn-small">Small Button</button>
               <button class="btn btn-medium">Medium Button</button>
               <button class="btn btn-large">Large Button</button>
-            <h3>Inputs</h3>
+            <h3 class="grey weight2">Inputs</h3>
+            <hr>
+
             <h2 class="formTitle">Form Title</h2>
             <input class="form-control" type="text" placeholder="Price" />
           </div>
