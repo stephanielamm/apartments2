@@ -10,8 +10,8 @@
 <script>
   import axios from 'axios';
   import Top from './Top';
- import ApartmentList from './ApartmentList';
- import ApartmentInfo from './ApartmentInfo';
+  import ApartmentList from './ApartmentList';
+  import ApartmentInfo from './ApartmentInfo';
 
   export default {
     components: {
@@ -40,7 +40,7 @@
         })
       },
       update (data) {
-     // this.fetch();
+      this.fetch();
      var i = this.apartments.indexOf(data.apartment);
      for (var d in data) {
        this.apartments[i][d] = data[d];

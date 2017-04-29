@@ -1,9 +1,12 @@
 <template lang="html">
  <div class="ApartmentList">
   <div class="container">
+  <!-- Add Apartment Button -->
    <div class="row addrow">
     <button class="btn pull-left add" @click="formIsVisible = true">Add Apartment</button>
   </div>
+  <!-- Table Starts -->
+
   <div class="row">
     <div class="col-lg-12">
       <ApartmentForm v-if="formIsVisible"></ApartmentForm>
@@ -18,16 +21,17 @@
             <th>Price</th>
           </tr>
         </thead>
+        <!-- Table Body, Loops in Table Row -->
         <tbody>
             <tr v-for="apartment in apartments" :class="{ active: isActive(apartment) }">
-                <th scope="row"> <a href="#" v-on:click="showDetails(apartment)"> Edit </a> </th>
+                <!-- Delete Here -->
+                <th scope="row"> <a href="#" v-on:click="deleteApartment(apartment)"> Delete </a> </th>
                 <td>  {{ apartment.name }} </td>
                 <td> {{ apartment.location }} </td>
                 <td> {{ apartment.bedrooms }} </td>
                 <td> {{ apartment.bathrooms }} </td>
                 <td> {{ apartment.price }} </td>
-                <ApartmentInfo @cancel="cancelled" class="conditional" :apartment="apartment"></ApartmentInfo>
-            </tr>
+              </tr>
         </tbody>
     </table>
     </div>
@@ -43,7 +47,6 @@ import ApartmentForm from './ApartmentForm';
 
 export default {
   components: {
-    ApartmentInfo,
     ApartmentForm
   },
 
@@ -59,7 +62,7 @@ export default {
 
   props: [
     'apartment'
-  ],
+    ],
 
   data () {
     return {
@@ -69,12 +72,11 @@ export default {
     }
   },
   methods: {
-    showDetails (apartment) {
-      this.currentApartment = apartment.id;
+    deleteApartment (apartment) {
+    //  this.currentApartment = apartment.id;
 
     },
     isActive (apartment) {
-      // console.log(apartment);
       if (apartment.id==this.currentApartment) {
         return true;
       }

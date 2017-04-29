@@ -5,8 +5,8 @@
       <div class="row description">This is a place to store information and compare apartments. Click on an apartment listing to view details and edit or delete it.</div>
       <div class="row links">
         <a href="/styleguide">Style Guide</a> |
-        <a href="github.com/stephanielamm">Github</a> |
-        <a href="stephanielamm.com">Portfolio</a>
+        <a href="http://www.github.com/stephanielamm">Github</a> |
+        <a href="http://www.stephanielamm.com">Portfolio</a>
       </div>
     </div>
   </div>

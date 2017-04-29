@@ -1,11 +1,11 @@
 <template>
-  <!--Editing form-->
   <div class="ApartmentInfo">
-    
+
     <!--Cancel button-->
     <div class="col-md-12">
          <button class="btn btn-primary pull-right cancel" @click="cancel()">Cancel</button>
    </div>
+   <!--Editing form-->
         <div class="col-md-12">
           <h1 class="formTitle">Edit</h1>
         </div>
@@ -37,10 +37,9 @@
        <!--Save button-->
        <div class="col-md-6">
             <button class="btn btn-primary pull-right create" @click="save()">Save</button>
-      </div>
+
       <!--Delete button-->
-      <div class="col-md-6">
-           <button class="btn btn-primary pull-right remove" @click="remove()">Delete</button>
+           <button class="btn btn-primary pull-left remove" @click="remove(apartment.id)">Delete</button>
      </div>
     </div>
 
@@ -61,49 +60,24 @@ export default {
   },
   mounted () {
     console.log('ApartmentInfo -> mounted', this.apartment);
-    // this.tempname = this.apartment.name;
   },
   props: [
-    'apartment'
+    'apartments',
+    'apartment',
+    'currentApartment'
   ],
   methods: {
     remove (i) {
-      console.log(`App -> remove ID ${i}`);
-      axios.delete(`/apartments/${this.apartment.id}`)
-      .then((response) => {
-        console.log('Apartment -> update success');
-        this.$emit('deleted', this.apartment);
-      })
-      .catch((error) => {
-        console.log('Apartment -> save error');
-      });
+      console.log(i);
+      // console.log('App -> remove ID ${i}');
+     this.apartments.splice(i, 1);
+      // axios.delete('/apartments/${this.apartment.id}')
+      // .then((response) => {
+      //   console.log('Apartment -> update success');
+      //   this.$emit('remove);
+      // });
+     this.$emit('remove');
     },
-   save () {
-      console.log('Apartment -> save');
-      this.apartment.name=this.tempName;
-      axios.put('/apartments/$'+this.apartment.id, {
-       name: this.apartment.name,
-       location: this.apartment.location,
-       bedrooms: this.apartment.bedrooms,
-       bathrooms: this.apartment.bathrooms,
-       price: this.apartment.price
-     })
-       .then((response) => {
-         console.log('Apartment -> save success');
-         this.$emit('updated', {
-           name: this.name,
-           location: this.location,
-           bedrooms: this.bedrooms,
-           bathrooms: this.bathrooms,
-           price: this.price
-         });
-         this.editing = false;
-       })
-          .catch((error) => {
-            console.log('Apartment -> save error');
-              //*show the user that it couldn't be updated*
-            });
-        },
         cancel () {
           console.log('Apartment -> cancel');
           this.name = this.apartment.name;
