@@ -43,9 +43,9 @@
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <h3>Typography</h3>
-            <h1 class="weight1">h1 Main Header Weight 1</h1>
+            <h1 class="weight1 blue">h1 Main Header Weight 1</h1>
             <h1 class="weight2">h2 Main Header Weight 2</h1>
-            <h1 class="weight3">h3 Main Header Weight 3</h1>
+            <h1 class="weight3 red">h3 Main Header Weight 3</h1>
             <h2>h2 Secondary Header</h2>
             <h3>h3 Tertiary Header</h3>
             <h4>h4 Subheader</h4>
@@ -58,13 +58,13 @@
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <h3>Lists</h3>
-            <ul>
+            <ul class="ul">
             <li>Unordered Item 1</li>
             <li>Unordered Item 2</li>
             <li>Unordered Item 3</li>
             <li>Unordered Item 4</li>
           </ul>
-            <ol>
+            <ol class="ol">
               <li>Ordered Item 1</li>
               <li>Ordered Item 2</li>
               <li>Ordered Item 3</li>
@@ -75,15 +75,9 @@
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <h3>Buttons</h3>
-            <div class="button btn-small">
-              <button>Small Button</button>
-            </div>
-            <div class="button btn-medium">
-              <button>Medium Button</button>
-            </div>
-            <div class="button btn-large">
-              <button>Large Button</button>
-            </div>
+              <button class="btn btn-small">Small Button</button>
+              <button class="btn btn-medium">Medium Button</button>
+              <button class="btn btn-large">Large Button</button>
             <h3>Inputs</h3>
             <h2 class="formTitle">Form Title</h2>
             <input class="form-control" type="text" placeholder="Price" />

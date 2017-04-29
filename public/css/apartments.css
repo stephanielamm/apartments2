@@ -15,21 +15,22 @@
     margin-left: 12px;
     padding-left: 15px;
   }
-.delete {
+.red {
   color: #f00008;s
+}
+.blue {
+  color: #0500f0;
 }
 .lead {
  font-weight: 500;
 }
-
 p {
   font-weight: 400;
 }
-
 .light {
  font-weight: 200;
+ font-style: italic;
 }
-
 .weight1 {
  font-weight: 500;
 }
@@ -39,10 +40,8 @@ p {
 .weight3 {
   font-weight: 800;
 }
-
 h1 {
   font-size: 50px;
-  color: #0500f0;
 }
 h2 {
   font-size: 35px;
@@ -56,14 +55,16 @@ h4 {
 h5 {
   font-size: 20px;
 }
-
+.ul {
+  font-weight: 700;
+}
+.ol {
+  font-weight: 500;
+}
 .btn-small {
-  width: 120px;
   font-weight: 500;
 }
 .btn-medium {
- width: 50%;
- padding: 24px auto;
  font-size: 15px;
  background: #f00008;
  color: white;
