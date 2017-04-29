@@ -7,7 +7,7 @@
         <a href="/styleguide">Style Guide</a> |
         <a href="https://github.com/stephanielamm/apartments2">Github</a> |
         <a href="http://www.stephanielamm.com">Portfolio</a> |
-        <a href="http://www.gitbook">Documentation</a>
+        <a href="https://www.gitbook.com/book/stephanielamm/subletr">Documentation</a>
       </div>
     </div>
     <hr>

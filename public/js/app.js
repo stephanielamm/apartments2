@@ -32602,7 +32602,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("Portfolio")]), _vm._v(" |\n      "), _c('a', {
     attrs: {
-      "href": "http://www.gitbook"
+      "href": "https://www.gitbook.com/book/stephanielamm/subletr"
     }
   }, [_vm._v("Documentation")])])]), _vm._v(" "), _c('hr')])
 }]}
