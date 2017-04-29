@@ -2,8 +2,12 @@
   <div class="Top">
     <div class="container-fluid header">
       <div class="row title">Apartment Finder</div>
-      <div class="row description">This is a place to store information and compare apartments.</div>
-      <div class="row links">Credits, Portfolio Link, Github Link, Style Guide</div>
+      <div class="row description">This is a place to store information and compare apartments. Click on an apartment listing to view details and edit or delete it.</div>
+      <div class="row links">
+        <a href="/styleguide">Style Guide</a> |
+        <a href="github.com/stephanielamm">Github</a> |
+        <a href="stephanielamm.com">Portfolio</a>
+      </div>
     </div>
   </div>
 </template>
@@ -20,6 +24,7 @@ export default {
 /*  background-color: blue; */
   color: black;
   padding-bottom: 5%;
+  padding-top: 2%;
 }
 .title {
  font-size: 50px;

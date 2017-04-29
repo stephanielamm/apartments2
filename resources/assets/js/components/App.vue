@@ -1,22 +1,20 @@
 <template lang="html">
 <div class="App">
   <Top></Top>
-  <!--ApartmentForm></ApartmentForm-->
+  <div class="container-fluid list">
   <ApartmentList></ApartmentList>
-
+</div>
 </div>
 </template>
 
 <script>
   import axios from 'axios';
   import Top from './Top';
-  // import ApartmentForm from './ApartmentForm';
  import ApartmentList from './ApartmentList';
  import ApartmentInfo from './ApartmentInfo';
 
   export default {
     components: {
-//      ApartmentForm
     Top,
     ApartmentList,
     ApartmentInfo
@@ -57,4 +55,6 @@
     </script>
 
 <style lang="css">
+.list {
+}
 </style>
