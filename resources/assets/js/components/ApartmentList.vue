@@ -14,7 +14,7 @@
   <!-- Table Starts -->
   <div class="row">
     <div class="col-lg-12">
-      <ApartmentForm v-if="formIsVisible"></ApartmentForm>
+      <ApartmentForm @created="fetch" v-if="formIsVisible"></ApartmentForm>
       <table class="table table-hover table-responsive">
         <thead>
           <tr>
@@ -58,6 +58,7 @@ export default {
   },
 
   mounted () {
+    this.fetch();
     axios.get('/apartments')
     .then(response => {
       this.apartments = response.data;
@@ -89,6 +90,20 @@ export default {
       })
       this.$emit('remove');
     },
+    fetch () {
+        console.log('App -> fetch');
+        axios.get('/apartments')
+          .then((response) => {
+            console.log('App -> fetch success');
+            console.log(response.data);
+            this.apartments = response.data;
+          })
+          .catch((response) => {
+            console.log('App -> fetch error');
+            //show error
+          });
+          this.formIsVisible = false;
+      },
     isActive (apartment) {
       if (apartment.id==this.currentApartment) {
         return true;

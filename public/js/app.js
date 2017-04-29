@@ -2283,6 +2283,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
   mounted: function mounted() {
     var _this = this;
 
+    this.fetch();
     __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/apartments').then(function (response) {
       _this.apartments = response.data;
     }).catch(function (error) {});
@@ -2307,6 +2308,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       console.log(i.id);
       __WEBPACK_IMPORTED_MODULE_0_axios___default.a.delete('/apartments/' + i.id, {});
       this.$emit('remove');
+    },
+    fetch: function fetch() {
+      var _this2 = this;
+
+      console.log('App -> fetch');
+      __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/apartments').then(function (response) {
+        console.log('App -> fetch success');
+        console.log(response.data);
+        _this2.apartments = response.data;
+      }).catch(function (response) {
+        console.log('App -> fetch error');
+        //show error
+      });
+      this.formIsVisible = false;
     },
     isActive: function isActive(apartment) {
       if (apartment.id == this.currentApartment) {
@@ -32846,7 +32861,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-lg-12"
-  }, [(_vm.formIsVisible) ? _c('ApartmentForm') : _vm._e(), _vm._v(" "), _c('table', {
+  }, [(_vm.formIsVisible) ? _c('ApartmentForm', {
+    on: {
+      "created": _vm.fetch
+    }
+  }) : _vm._e(), _vm._v(" "), _c('table', {
     staticClass: "table table-hover table-responsive"
   }, [_vm._m(0), _vm._v(" "), _c('tbody', _vm._l((_vm.apartments), function(apartment) {
     return _c('tr', {
