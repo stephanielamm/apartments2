@@ -2,7 +2,7 @@
 <div class="app">
 <div class="App">
   <Top></Top>
-  <ApartmentList @deleted="remove"></ApartmentList>
+  <ApartmentList></ApartmentList>
 </div>
 </div>
 </template>
@@ -39,19 +39,7 @@
         .catch((response) => {
           console.log('App -> fetch error');
         })
-      },
-  //     update (data) {
-  //     this.fetch();
-  //    var i = this.apartments.indexOf(data.apartment);
-  //    for (var d in data) {
-  //      this.apartments[i][d] = data[d];
-  //    }
-  //  },
-   remove (data) {
-     var i = this.apartments.indexOf(data);
-     console.log(`App -> remove ID: ${i}`);
-     this.apartments.splice(i, 1);
-   }
+      }
     }
   }
     </script>
