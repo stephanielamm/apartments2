@@ -1,9 +1,8 @@
 <template>
-<!--Input form-->
+<!--Create form-->
 <div class="ApartmentForm">
-  <button>Cancel</button>
       <div class="col-md-12">
-        <h1 class="formTitle">Add New Apartment</h1>
+        <h2 class="formTitle">Add New Apartment</h2>
       </div>
       <div class="col-md-12">
      <div class="col-md-6">
@@ -33,7 +32,7 @@
      </div>
      <!--Create button-->
      <div class="col-md-12">
-          <button class="btn btn-primary pull-right create" @click="create()">create</button>
+          <button class="btn btn-small pull-right create" @click="create()">Create</button>
     </div>
    </div>
   </div>
@@ -41,6 +40,8 @@
 
 <script>
 import axios from 'axios';
+import ApartmentList from './ApartmentList';
+
 export default {
   data() {
     return {
@@ -52,6 +53,7 @@ export default {
     }
   },
   methods: {
+    // POST method
     create () {
       console.log('ApartmentForm -> create');
       this.sendRequest();
@@ -73,15 +75,16 @@ export default {
          .catch((error) => {
            console.error('ApartmentForm -> sendRequest error');
            // show an error message
-         });
-       },
-       reset () {
-         this.name = '';
-         this.location = '';
-         this.bedrooms = '';
-         this.bathrooms = '';
-         this.price = '';
-       },
+       });
+},
+        reset () {
+        this.name = '';
+        this.location = '';
+        this.bedrooms = '';
+        this.bathrooms = '';
+        this.price = '';
+       }
+
      }
    };
    </script>

@@ -1,0 +1,97 @@
+.app {
+  background: white;
+  height: 100%;
+}
+
+.body {
+  font-family: 'Raleway', sans-serif;
+}
+.header {
+  height: 20%;
+  margin-bottom: 13px;
+  padding-bottom: 5%;
+  padding-top: 2%;
+  padding-right: 8%;
+  padding-left: 8%;
+  text-align: center;
+}
+
+a {
+  color: #76DED7
+}
+.addrow {
+    margin-bottom: 12px;
+    margin-left: 12px;
+    padding-left: 15px;
+  }
+.red {
+  color: #f00008;
+}
+.blue {
+  color: #76DED7;
+}
+.grey {
+  color: rgba(0,0,0,0.5);
+}
+.lead {
+ font-weight: 500;
+}
+p {
+  font-weight: 400;
+}
+.light {
+ font-weight: 200;
+ font-style: italic;
+}
+.weight1 {
+ font-weight: 500;
+}
+.weight2 {
+  font-weight: 700;
+}
+.weight3 {
+  font-weight: 800;
+}
+h1 {
+  font-size: 50px;
+}
+h2 {
+  font-size: 35px;
+}
+h3 {
+  font-size: 30px;
+}
+h4 {
+  font-size: 25px;
+}
+h5 {
+  font-size: 20px;
+}
+.ul {
+  font-weight: 700;
+}
+.ol {
+  font-weight: 500;
+}
+.btn-small {
+  font-weight: 500;
+}
+.btn-medium {
+ font-size: 15px;
+ background: #f00008;
+ color: white;
+}
+.btn-large {
+  font-size: 20px;
+}
+.add {
+  background: #f00008;
+  color: white;
+}
+.create {
+  margin-bottom: 13px;
+  padding-bottom: 13px;
+}
+.button:hover{
+  color: white;
+}

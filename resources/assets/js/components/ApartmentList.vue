@@ -3,13 +3,18 @@
   <div class="container">
   <!-- Add Apartment Button -->
    <div class="row addrow">
-    <button class="btn pull-left add" @click="formIsVisible = true">Add Apartment</button>
-  </div>
-  <!-- Table Starts -->
+    <button class="btn btn-small pull-left" @click="formIsVisible = true">Add Apartment</button>
+   </div>
 
+  <!--Cancel Button-->
+  <div class="row addrow" v-show="formIsVisible">
+       <button class="btn btn-small pull-left add" @click="formIsVisible = false">Cancel</button>
+ </div>
+
+  <!-- Table Starts -->
   <div class="row">
     <div class="col-lg-12">
-      <ApartmentForm v-if="formIsVisible"></ApartmentForm>
+      <ApartmentForm @created="fetch" v-if="formIsVisible"></ApartmentForm>
       <table class="table table-hover table-responsive">
         <thead>
           <tr>
@@ -21,11 +26,13 @@
             <th>Price</th>
           </tr>
         </thead>
+
         <!-- Table Body, Loops in Table Row -->
         <tbody>
             <tr v-for="apartment in apartments" :class="{ active: isActive(apartment) }">
+
                 <!-- Delete Here -->
-                <th scope="row"> <a href="#" v-on:click="deleteApartment(apartment)"> Delete </a> </th>
+                <th scope="row"> <a href="#" class="red" v-on:click="deleteApartment(apartment)"> Delete </a> </th>
                 <td>  {{ apartment.name }} </td>
                 <td> {{ apartment.location }} </td>
                 <td> {{ apartment.bedrooms }} </td>
@@ -51,6 +58,7 @@ export default {
   },
 
   mounted () {
+    this.fetch();
     axios.get('/apartments')
     .then(response => {
       this.apartments = response.data;
@@ -61,7 +69,8 @@ export default {
   },
 
   props: [
-    'apartment'
+    'apartment',
+    'currentApartment'
     ],
 
   data () {
@@ -72,10 +81,30 @@ export default {
     }
   },
   methods: {
-    deleteApartment (apartment) {
-    //  this.currentApartment = apartment.id;
+    // DELETE method
+    deleteApartment (i) {
+      console.log(i);
 
+      console.log(this.apartments);
+      axios.delete('/apartments/'+i.id, {
+
+      });
+      var arrayId = this.apartments.indexOf(i);
+      this.apartments.splice(arrayId, 1);
     },
+    // Getting Create data from ApartmentForm
+    fetch () {
+        // console.log('App -> fetch');
+        axios.get('/apartments')
+          .then((response) => {
+            this.apartments = response.data;
+          })
+          .catch((response) => {
+            console.log('App -> fetch error');
+            //show error
+          });
+          this.formIsVisible = false;
+      },
     isActive (apartment) {
       if (apartment.id==this.currentApartment) {
         return true;
@@ -99,13 +128,5 @@ export default {
   }
   .active .conditional {
     display: block;
-  }
-  .add {
-
-  }
-  .addrow {
-    margin-bottom: 12px;
-    margin-left: 12px;
-    padding-left: 15px;
   }
 </style>

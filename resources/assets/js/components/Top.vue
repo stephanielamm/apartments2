@@ -1,14 +1,17 @@
 <template lang="html">
   <div class="Top">
     <div class="container-fluid header">
-      <div class="row title">Apartment Finder</div>
-      <div class="row description">This is a place to store information and compare apartments. Click on an apartment listing to view details and edit or delete it.</div>
-      <div class="row links">
+      <div class="row"><h1 class="blue weight2">Subletr</h1></div>
+      <div class="row"><h5 class="weight1">This is an application to store and compare apartment listings. Click the button below to add an apartment to your list.</h5></div>
+      <div class="row">
         <a href="/styleguide">Style Guide</a> |
-        <a href="http://www.github.com/stephanielamm">Github</a> |
-        <a href="http://www.stephanielamm.com">Portfolio</a>
+        <a href="https://github.com/stephanielamm/apartments2">Github</a> |
+        <a href="http://www.stephanielamm.com">Portfolio</a> |
+        <a href="https://www.gitbook.com/book/stephanielamm/subletr">Documentation</a>
       </div>
     </div>
+    <hr>
+
   </div>
 </template>
 
@@ -18,22 +21,5 @@ export default {
 </script>
 
 <style lang="css">
-.header {
-  height: 20%;
-  margin-bottom: 13px;
-/*  background-color: blue; */
-  color: black;
-  padding-bottom: 5%;
-  padding-top: 2%;
-}
-.title {
- font-size: 50px;
- text-align: center;
-}
-.description {
- text-align: center;
-}
-.links {
- text-align: center;
-}
+
 </style>
