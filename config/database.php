@@ -44,7 +44,7 @@ return [
             'prefix' => '',
         ],
         
-         ‘mysql’ => [
+         'mysql’ => [
             ‘driver’ => ‘mysql’,
             ‘host’ => $host,
             ‘port’ => env(‘DB_PORT’, ‘3306’),
